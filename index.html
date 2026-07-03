@@ -1,25 +1,65 @@
 eric vinicius do nascimento pereire
 1a formacao de docentes
-// Seleciona o botão de alternar tema
-const themeToggle = document.getElementById('theme-toggle');
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto Web GitHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-// Verifica se o usuário já tem uma preferência salva no navegador
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-}
+    <!-- Cabeçalho / Menu -->
+    <header>
+        <div class="logo">MeuProjeto.git</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">🌓 Alternar Tema</button>
+    </header>
 
-// Adiciona o evento de clique para mudar o tema
-themeToggle.addEventListener('click', () => {
-    // Verifica o tema atual
-    let theme = document.documentElement.getAttribute('data-theme');
-    
-    // Alterna entre light e dark
-    if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    }
-});
+    <!-- Seção Principal -->
+    <section id="inicio" class="hero">
+        <h1>Bem-vindo ao Meu Projeto Web</h1>
+        <p>Esta é uma página moderna criada para o GitHub, com suporte a modo escuro e design responsivo.</p>
+        <a href="#sobre" class="btn">Saiba Mais</a>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="container">
+        <h2>Sobre o Projeto</h2>
+        <p>Este repositório serve como uma base sólida para quem deseja iniciar no desenvolvimento web. Ele utiliza HTML5 estruturado, CSS3 moderno com variáveis e JavaScript vanilla.</p>
+    </section>
+
+    <!-- Seção de Recursos (Cards) -->
+    <section id="recursos" class="container text-center">
+        <h2>O que este projeto inclui?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>HTML5 Semântico</h3>
+                <p>Código limpo, organizado e otimizado para motores de busca (SEO).</p>
+            </div>
+            <div class="card">
+                <h3>CSS Moderno</h3>
+                <p>Uso de Flexbox, Grid Layout e variáveis para fácil customização.</p>
+            </div>
+            <div class="card">
+                <h3>Modo Escuro</h3>
+                <p>Interatividade nativa com JavaScript para alternar o tema visual.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Meu Projeto GitHub. Feito com 💻 e ☕.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
